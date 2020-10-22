@@ -2,16 +2,13 @@ import React from "react"
 import { observer } from "mobx-react-lite"
 import { ViewStyle, TextStyle } from "react-native"
 import { Screen, Text } from "../../components"
-import { AppHeader } from "../../components"
+import { Header } from "../../components"
 //import { useNavigation } from "@react-navigation/native"
 // import { useStores } from "../../models"
 import { color } from "../../theme"
 //import { StyleSheet} from 'react-native';
 import { Image, View, Dimensions } from 'react-native';
 import { spacing } from "../../theme";
-
-import { ParamListBase } from "@react-navigation/native"
-import { DrawerNavigationProp } from "@react-navigation/drawer"
 
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
@@ -38,16 +35,7 @@ const HEADER_TITLE: TextStyle = {
   letterSpacing: 1.5,
 }
 
-export interface ProjectsScreenProps {
-  navigation: DrawerNavigationProp<ParamListBase>
-}
-
-export interface HomeScreenProps {
-  navigation: DrawerNavigationProp<ParamListBase>
-}
-
-//export const HomeScreen = observer(function HomeScreen() {
-  export const HomeScreen: React.FunctionComponent<HomeScreenProps> = observer((props) => {
+export const HomeScreen = observer(function HomeScreen() {
   // Pull in one of our MST stores
   // const { someStore, anotherStore } = useStores()
   // OR
@@ -59,7 +47,11 @@ export interface HomeScreenProps {
   return (
     <View style={FULL}>
       <Screen style={CONTAINER} preset="scroll" backgroundColor={color.transparent}>
-        <AppHeader  {...props} />
+        <Header
+          headerTx="homeScreen.headertitle"
+          style={HEADER}
+          titleStyle={HEADER_TITLE}
+        />
         <Image  source={require('./background.jpg')} style={{ position:"absolute",
                                                               left:0,
                                                               top:65,
