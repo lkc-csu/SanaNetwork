@@ -1,5 +1,8 @@
 # SanaNetwork
 
+# here is the close command
+git clone https://github.com/testibisprojects/SanaNetwork.git
+
 [![CircleCI](https://circleci.com/gh/infinitered/ignite-bowser.svg?style=svg)](https://circleci.com/gh/infinitered/ignite-bowser)
 
 ## The latest and greatest boilerplate for Infinite Red opinions

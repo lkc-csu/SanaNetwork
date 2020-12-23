@@ -1,6 +1,6 @@
 import React from "react"
 import { observer } from "mobx-react-lite"
-import { ViewStyle, TextStyle } from "react-native"
+import { ViewStyle, TextStyle, Alert } from "react-native"
 import { Screen, Text } from "../../components"
 import { Header } from "../../components"
 //import { useNavigation } from "@react-navigation/native"
@@ -35,6 +35,15 @@ const HEADER_TITLE: TextStyle = {
   letterSpacing: 1.5,
 }
 
+export function MyAlert(astring) {
+  Alert.alert(astring)
+}
+{/* <Image  source={require('./background.jpg')} style={{ position:"absolute",
+                                                              left:0,
+                                                              top:65,
+                                                              width:windowWidth,
+                                                              height:mywindowHeight,
+                                                              opacity:0.55}} >*/}
 export const HomeScreen = observer(function HomeScreen() {
   // Pull in one of our MST stores
   // const { someStore, anotherStore } = useStores()
@@ -51,8 +60,10 @@ export const HomeScreen = observer(function HomeScreen() {
           headerTx="homeScreen.headertitle"
           style={HEADER}
           titleStyle={HEADER_TITLE}
+          leftIcon={"menu"}
+          onLeftPress={()=> {MyAlert("now is the time for all good people to come to the aid of their country")}}
         />
-        <Image  source={require('./background.jpg')} style={{ position:"absolute",
+        <Image  source={require('./background.jpg')} style={{ 
                                                               left:0,
                                                               top:65,
                                                               width:windowWidth,
