@@ -9,3 +9,6 @@ export * from "./switch/switch"
 export * from "./text/text"
 export * from "./text-field/text-field"
 export * from "./wallpaper/wallpaper"
+export * from "./my-web-view/my-web-view"
+export * from "./my-activity-indicator/my-activity-indicator"
+

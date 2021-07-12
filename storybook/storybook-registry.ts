@@ -1,3 +1,5 @@
+require("../app/components/my-activity-indicator/my-activity-indicator.story")
+require("../app/components/my-web-view/my-web-view.story")
 require("../app/components/text/text.story")
 require("../app/components/button/button.story")
 require("../app/components/form-row/form-row.story")
